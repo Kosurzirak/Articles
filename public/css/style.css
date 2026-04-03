@@ -1,0 +1,18 @@
+body {
+    background-color: royalblue;
+     
+}
+table, th, td {
+ border: 1px solid black;
+border-radius: 10px;
+}
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+
+    position: relative;
+    background-color: #5dbea3;
+    
+}
