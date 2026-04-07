@@ -17,6 +17,8 @@ Route::redirect('/', '/articles');
 
 // Route::get('/post/{post}', [PostController::class, 'show']);
 
+// TODO: voor een volgende keer zou ik een Route::resource gebruiken die alle routes voor 1 entiteit automatisch aanmaakt
+
 Route::post('/articles/{article}/comments', [CommentController::class, 'store'])->name("comments.store");
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');

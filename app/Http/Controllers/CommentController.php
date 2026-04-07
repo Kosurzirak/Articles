@@ -25,6 +25,7 @@ class CommentController extends Controller
     {
         $comment = new Comment();
         
+        // TODO: onderstaande regel zou niet kunnen werken omdat $_POST een array is en geen id
         $comment->post()->associate($_POST);
 
         $comment->save();
@@ -39,6 +40,7 @@ class CommentController extends Controller
     {   
         $validated = $request->validated();
         $validated["article_id"] = $article->id;
+        // TODO: ongebruikte comments verwijderen voor betere leesbaarheid van je code
         // dd($validated);
 
         $comment = Comment::create($validated);

@@ -28,6 +28,7 @@ public function upload(Request $request)
     }
     return redirect()->route('image.form')->with('error', 'Image upload failed.');
 }   
+// TODO: regels consistent laten inspringen
     public function showForm()
 {
     return view('upload');

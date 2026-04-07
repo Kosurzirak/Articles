@@ -6,6 +6,8 @@
 
     <p>Dit is de pagina waar alle artiklels plaats vinden</p>
 
+    <!-- TODO: onderstaande links en welkomstboodschap zou ik in de nav blade doen -->
+
     @auth
      <h1>Welcome {{ Auth::user()->name }}</h1>   
     @endauth

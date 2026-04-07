@@ -1,3 +1,4 @@
+<!-- TODO: ongebruikte bestanden verwijderen -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

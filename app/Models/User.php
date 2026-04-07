@@ -54,6 +54,8 @@ class User extends Authenticatable
     public function articles() {
         return $this->hasMany(Article::class);
     }
+
+    // TODO: many relatienamen altijd meervoud voor gebruiken, in dit geval dus: posts
     public function post()
     {
         return $this->hasMany(Article::class);

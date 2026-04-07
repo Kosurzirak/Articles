@@ -15,6 +15,7 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
+        // TODO: maak aparte form validation class (mbv artisan) waar de rules in komen te staan voor betere leesbaarheid
         // Validate the request data
         $credentials = $request->validate([
             'email' => 'required|string|max:50',

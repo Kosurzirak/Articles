@@ -25,6 +25,8 @@ class ArticleController extends Controller
             $builder = Article::where('is_premium', false);
         }
 
+        // TODO: ik vind onderstaande code moeilijk te lezen / begrijpen, het zou verhelderend zijn om met commentaar
+        // aan te geven hoe de filters werken
         $builder->when($request->filled('category') && $request->get('category') != "0", function ($query) use ($request) {
             $query->where('category_id', $request->input('category'));
         });
@@ -41,6 +43,7 @@ class ArticleController extends Controller
         });
 
         $articles = $builder->with('category')->get();
+        // TODO: onderstaande regel is overbodig, want $user wordt nergens gebruikt
         $user = Article::find(1)->user;
         
         $categories = Category::with('articles')->get();
@@ -65,7 +68,7 @@ class ArticleController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreArticleRequest $request) 
-    
+    // TODO: deze witregel kan weg, gebruik evt. een formatter plugin om je code op te laten maken
     {
         $validated = $request->validated();
         $path = $request->file('image')->store('images', ['disk' => 'public']);
@@ -97,7 +100,7 @@ class ArticleController extends Controller
      */
     public function show(string $id)
     {
-        
+        // TODO: gebruik route-model binding
         $article = Article::find($id);
         $categories = Category::all();
         return view('articles.show', compact('article'));
