@@ -44,7 +44,7 @@ class ArticleController extends Controller
 
         $articles = $builder->with('category')->get();
         // TODO: onderstaande regel is overbodig, want $user wordt nergens gebruikt
-        $user = Article::find(1)->user;
+        
         
         $categories = Category::with('articles')->get();
         $users = User::with('articles')->get();
