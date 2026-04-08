@@ -56,7 +56,7 @@ class User extends Authenticatable
     }
 
     // TODO: many relatienamen altijd meervoud voor gebruiken, in dit geval dus: posts
-    public function post()
+    public function posts()
     {
         return $this->hasMany(Article::class);
     }
