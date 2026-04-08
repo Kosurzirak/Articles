@@ -14,8 +14,7 @@
 
     @guest
     <h1>    Welcome guest Please Login </h1>
-        <li><a href="{{ route('login.show') }}">Login</a></li> 
-        <li><a href="{{ route('login.show') }}">Register</a></li>
+       
     @endguest
     
     <h1>Articles</h1>
