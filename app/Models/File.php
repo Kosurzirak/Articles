@@ -15,10 +15,7 @@ class File extends Model
         
         return $this->belongsTo(Category::class);
     }
-    // TODO: een file heeft toch geen comments?
-    public function comments() {
-         return $this->hasMany(Comment::class);
-    }
+ 
     public function article() {
          return $this->belongsTo(Article::class);
     }
