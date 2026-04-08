@@ -12,15 +12,7 @@ class PostController extends Controller
     public function index()
     {
 {
-        // TODO: Post model bestaat niet!
-        $posts = Post::with('comments')->get();
-        
-        
-        
-        return view('home', [
-            'posts' => $posts,
-            
-        ]);
+
 }
     }
     /**
