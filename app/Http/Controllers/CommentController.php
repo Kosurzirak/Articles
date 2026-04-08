@@ -26,7 +26,7 @@ class CommentController extends Controller
         $comment = new Comment();
         
         // TODO: onderstaande regel zou niet kunnen werken omdat $_POST een array is en geen id
-        $comment->post()->associate($_POST);
+        $comment->post()->associate();
 
         $comment->save();
 
