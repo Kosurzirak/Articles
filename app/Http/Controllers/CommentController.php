@@ -41,7 +41,7 @@ class CommentController extends Controller
         $validated = $request->validated();
         $validated["article_id"] = $article->id;
         // TODO: ongebruikte comments verwijderen voor betere leesbaarheid van je code
-        // dd($validated);
+        
 
         $comment = Comment::create($validated);
 
